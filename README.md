@@ -1,7 +1,7 @@
 # Install instructions
 
-1. Navigate to the project directory
-  (on Windows: cd <path-to-directory>)
+1. In Terminal/CMD Navigate to the project directory
+  (on Windows: cd path-to-directory)
   
 2. Install necessary dependencies
   
