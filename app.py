@@ -84,7 +84,7 @@ def get_processes():
                 continue
             
             output.append({
-                'command': result[0],
+                'command': " ".join((result[0:-2])),
                 'pid': result[-2],
                 'cpu': result[-1]
             })
