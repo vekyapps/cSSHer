@@ -15,7 +15,7 @@ import paramiko
 ROOT_DIRECTORY = os.path.abspath(os.path.dirname(__file__))
 LOGS_DIRECTORY = ROOT_DIRECTORY + os.sep + 'logs'
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 
 # Configure (custom) Logging
 def custom_file_logging():
