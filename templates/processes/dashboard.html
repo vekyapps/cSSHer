@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="main-form">
+    <form action='#'>
+
+    </form>
+</div>
+
+<div id="processes-loading" class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+</div>
+
+
+        <table id="processes-grid" style="border:1px solid #000000;border-collapse: collapse">
+            <thead>
+                <tr>
+                    <th>Command</th>
+                    <th>PID</th>
+                    <th>CPU usage (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                </tr>
+            </tbody>
+        </table>
+
+{% endblock %}
