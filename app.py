@@ -53,12 +53,7 @@ def get_processes():
                         +str(request.form))
         return jsonify({'success': False, 'msg': 'Username is not provided'})
 
-    password = request.form.get('password')
-    if not password:
-        app.logger.info('Invalid password received in request! Request data: '
-                        +str(request.form))
-        return jsonify({'success': False, 'msg': 'Password is not provided'})
-
+    password = request.form.get('password', '')
     output = []
     try:
         ssh_client = paramiko.SSHClient()
