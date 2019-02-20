@@ -2,32 +2,44 @@
 
 {% block content %}
 
-<div id="main-form">
-    <form action='#'>
+<div class="content" style="width:600px;margin-left:25px">
 
-    </form>
-</div>
 
-<div id="processes-loading" class="spinner-border" role="status">
+    <div id="main-form">
+        <form action="#" style="border:1px solid #000000;padding:15px">
+            <div class="form-group">
+                <label for="hostField">IP address/hostname</label>
+                <input type="text" class="form-control" id="hostField" placeholder="Enter IP address/hostname">
+            </div>
+            <div class="form-group">
+                <label for="usernameField">Username</label>
+                <input type="text" class="form-control" id="usernameField" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="passwordField">Password</label>
+                <input type="password" class="form-control" id="passwordField" placeholder="Password">
+            </div>
+            <button id="fetchBtn" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <div id="processes-loading" class="spinner-border d-none" role="status">
         <span class="sr-only">Loading...</span>
+    </div>
+
+
+    <table id="processes-grid" class="table d-none">
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>PID</th>
+                <th>CPU usage (%)</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
 </div>
 
-
-        <table id="processes-grid" style="border:1px solid #000000;border-collapse: collapse">
-            <thead>
-                <tr>
-                    <th>Command</th>
-                    <th>PID</th>
-                    <th>CPU usage (%)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>C</td>
-                </tr>
-            </tbody>
-        </table>
 
 {% endblock %}
